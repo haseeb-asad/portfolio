@@ -4,8 +4,8 @@ import MainLayout from '@/layouts/MainLayout';
 import { allAuthors } from 'contentlayer/generated';
 
 export const metadata = {
-  title: 'About - Dale Larroder',
-  description: 'About me - Dale Larroder',
+  title: 'About - Haseeb Asad',
+  description: 'About me - Haseeb Asad',
 };
 
 export default function About() {

@@ -1,6 +1,6 @@
 const siteMetadata = {
-  title: 'Dale Larroder',
-  author: 'Dale Larroder',
+  title: 'Haseeb Asad',
+  author: 'Haseeb Asad',
   headerTitle: 'dalelarroder',
   description: 'Software Developer at Aphex',
   language: 'en-us',
