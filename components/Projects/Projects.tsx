@@ -1,38 +1,24 @@
-'use client';
+import React from "react";
+import projects from "@/data/content/projects";
+import { Project } from "types";
+import { kebabCase } from "@/utils/utils";
+import Link from "next/link";
+import Image from "next/image";
+import ProjectCard from "./ProjectCard";
 
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import useBreakpoint from 'use-breakpoint';
-import ProjectItem from './ProjectItem';
-import ProjectPreview from './ProjectPreview';
-import { projects } from './constants';
-import { ProjectModal } from './types';
+type ProjectProps = {
+  overwriteProjects?: Project[];
+};
 
-const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 };
-
-export default function Projects() {
-  const { breakpoint } = useBreakpoint(BREAKPOINTS);
-  const [modal, setModal] = useState<ProjectModal>({ active: false, index: 0 });
-
+function Projects({ overwriteProjects }: ProjectProps) {
+  const projectsList = overwriteProjects ? overwriteProjects : projects;
   return (
-    <>
-      {projects.map((project, index) => (
-        <motion.div
-          key={project.title}
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6, delay: index / 10 }}
-        >
-          <ProjectItem
-            index={index}
-            title={project.title}
-            url={project.url}
-            role={project.role}
-            setModal={setModal}
-          />
-        </motion.div>
-      ))}
-      {breakpoint === 'desktop' && <ProjectPreview modal={modal} projects={projects} />}
-    </>
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
+      {projectsList.map((item) => {
+        return <ProjectCard key={item.id} project={item} />;
+      })}
+    </div>
   );
 }
+
+export default Projects;
