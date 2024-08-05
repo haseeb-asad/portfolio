@@ -7,11 +7,11 @@ import React from "react";
 function designs() {
   return (
     <Page
-      currentPage="Designs"
+      currentPage="About Me"
       meta={{ desc: "I'm an avid self-taught designer too! I publish all my web and creative designs on Dribbble also." }}
     >
       <Heading />
-      <Projects />
+      {/* <Projects /> */}
       <More />
     </Page>
   );

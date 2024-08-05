@@ -29,10 +29,10 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Remove Background Application",
+    title: "Remove Background App",
     desc: "A simple web application using AI to remove background from images.",
     img: "/static/projects/bitcointemp.png",
-    link: "https://remove-bg-latest.onrender.com",
+    link: "https://remove-background-tvrqmtjgja-uc.a.run.app/",
     github: "https://github.com/HaseeebA/removeBackground",
     tags: ["Flask", "Python", "Rembg", "API", "Render", "Docker"],
   },
