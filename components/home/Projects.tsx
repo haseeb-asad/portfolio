@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import SectionTitle from "../global/SectionTitle";
 import projects from "@/data/content/projects";
-
+import More from "../projects/More";
 import ProjectCard from "../projects/ProjectCard1";
 
 function Projects() {
