@@ -3,7 +3,7 @@ import React from "react";
 import SectionTitle from "../global/SectionTitle";
 import projects from "@/data/content/projects";
 
-import ProjectCard from "../projects/ProjectCard.tsx";
+import ProjectCard from "../projects/ProjectCard";
 
 function Projects() {
   return (
