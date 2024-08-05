@@ -1,7 +1,7 @@
-import Heading from "components/projects/Heading";
-import More from "components/projects/More";
+import Heading from "@/components/Projects/Heading";
+import More from "@/components/Projects/More";
 import Page from "components/utility/Page";
-import Projects from "components/projects/Projects";
+import Projects from "@/components/Projects/Projects";
 import React from "react";
 
 function projects() {

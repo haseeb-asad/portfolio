@@ -6,9 +6,9 @@ import { allKebabTags, allTags } from "@/data/content/projects";
 import projects from "@/data/content/projects";
 
 import { kebabCase, kebabArray } from "@/utils/utils";
-import Projects from "components/projects/Projects";
-import Heading from "components/projects/Heading";
-import More from "components/projects/More";
+import Projects from "@/components/Projects/Projects";
+import Heading from "@/components/Projects/Heading";
+import More from "@/components/Projects/More";
 import Link from "next/link";
 
 export const getStaticPaths: GetStaticPaths = async () => {
