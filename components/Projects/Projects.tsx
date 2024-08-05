@@ -4,7 +4,7 @@ import { Project } from "types";
 import { kebabCase } from "@/utils/utils";
 import Link from "next/link";
 import Image from "next/image";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./ProjectCard1";
 
 type ProjectProps = {
   overwriteProjects?: Project[];
