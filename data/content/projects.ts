@@ -16,7 +16,7 @@ const projects: Project[] = [
     desc: "A SAAS Startup that uses AI to provide clean APIs for extracting unstructured data from text and converting it into structured data.",
     img: "/static/projects/dataclean.png",
     link:"https://dataclean.tech",
-    tags: ["NextJS", "Express", "Vercel", "API", "AI", "NLP"],
+    tags: ["NextJS", "Stripe", "Express", "Vercel", "API", "AI", "NLP"],
   },
   {
     id: 2,
