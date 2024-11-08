@@ -17,7 +17,7 @@ export const skills: Skill[] = [
   },
   {
     title: "Stripe",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stripe/stripe-original.svg",
+    icon: "https://www.vectorlogo.zone/logos/stripe/stripe-icon.svg",
   },
   {
     title: "Docker",
