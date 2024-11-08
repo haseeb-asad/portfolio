@@ -4,6 +4,22 @@ import { Project } from "types";
 const projects: Project[] = [
   {
     id: 0,
+    title: "FinTrail App",
+    desc: "Track all your financials in one place, A simple phone application to track your expenses, income, bill splitting and investments.",
+    img: "/static/projects/fintrail.png",
+    link:"https://play.google.com/store/apps/details?id=com.flutterflow.fintrail",
+    tags: ["Flutter", "Flask", "GCP", "AWS", "API"],
+  },
+  {
+    id: 1,
+    title: "dataclean.tech",
+    desc: "A SAAS Startup that uses AI to provide clean APIs for extracting unstructured data from text and converting it into structured data.",
+    img: "/static/projects/dataclean.png",
+    link:"https://dataclean.tech",
+    tags: ["NextJS", "Express", "Vercel", "API", "AI", "NLP"],
+  },
+  {
+    id: 2,
     title: "SecureTeams",
     desc: "A Secure Platform for IT Companies to manage their teams and projects. Secured using encryption in storage and transit. Real-time chat and file sharing using sockets.",
     img: "/static/projects/secureteams.png",
@@ -12,7 +28,7 @@ const projects: Project[] = [
     tags: ["React", "TailwindCSS", "CSS", "MongoDB", "Socket.io"],
   },
   {
-    id: 1,
+    id: 3,
     title: "Stock Price API",
     desc: "A Flask server deployed with docker onto Google Cloud Run to fetch real time prices of any stock using yfinance.",
     img: "/static/projects/stockapi.png",
@@ -20,29 +36,22 @@ const projects: Project[] = [
     tags: ["Flask", "Python", "Docker", "Google Cloud Run", "API"],
   },
   {
-    id: 2,
+    id: 4,
     title: "Crypto Price API",
     desc: "A Flask server deployed with docker onto Google Cloud Run to fetch real time prices of any cryptocurrency using coingecko.",
-    img: "/static/projects/react-emoji-search.png",
+    img: "/static/projects/cryptoapi.png",
     github: "https://github.com/HaseeebA/cryptoPriceFetcher",
     tags: ["Flask", "Python", "Docker", "Google Cloud Run", "API"],
   },
   {
-    id: 3,
+    id: 5,
     title: "Remove Background App",
     desc: "A simple web application using AI to remove background from images.",
-    img: "/static/projects/bitcointemp.png",
+    img: "/static/projects/bgremove.png",
     link: "https://remove-background-tvrqmtjgja-uc.a.run.app/",
     github: "https://github.com/HaseeebA/removeBackground",
     tags: ["Flask", "Python", "Rembg", "API", "Render", "Docker"],
   },
-  // {
-  //   id: 4,
-  //   title: "CasaMigo Android Application",
-  //   desc: "Generate a vanilla HTML boilerplate in a flash!",
-  //   img: "/static/projects/create-html-boilerplate.png",
-  //   tags: ["Node", "Javascript", "NPM", "HTML"],
-  // },
 ];
 
 export const allTags = []
