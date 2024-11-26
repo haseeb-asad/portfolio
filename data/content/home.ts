@@ -96,6 +96,6 @@ export const testimonials: Testimonial[] = [
     quote:
       "My vision was executed perfectly. The quality and speed of the work was excellent.",
     name: "Katie Jones",
-    job: "Client",
+    job: "Clientyarn",
   },
 ];
