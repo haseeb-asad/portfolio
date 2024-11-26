@@ -21,7 +21,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: "nextotp.tech",
-    desc: "A SAAS platform that provides OTPs for your applications using Whatsapp API at a cheap rate.",
+    desc: "A SAAS platform that provides OTPs (for 2FA) for your applications using Whatsapp API at a cheap rate.",
     img: "/static/projects/nextotp.png",
     link: "https://nextotp.tech",
     tags: ["NextJS", "Stripe", "whatsapp API", "Express", "Vercel", "API", "AI", "NLP"],
