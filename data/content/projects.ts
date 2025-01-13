@@ -37,6 +37,30 @@ const projects: Project[] = [
   },
   {
     id: 4,
+    title: "RAFT Implementatino - Distributed Systems",
+    desc: "A simple implementation of the RAFT consensus algorithm in GoLang.",
+    img: "/static/projects/github_project.png",
+    github: "https://github.com/HaseeebA/raft-project",
+    tags: ["GoLang", "Distributed Systems", "RAFT"],
+  },
+  {
+    id: 5,
+    title: "RAG Implementaion, talk to your documents!",
+    desc: "A simple implementation of the RAG (Retrieval Augmented Generation) model in Python.",
+    img: "/static/projects/github_project.png",
+    github: "https://github.com/HaseeebA/rag_implementation",
+    tags: ["Python", "HuggingFace", "RAG"],
+  },
+  {
+    id: 6,
+    title: "OTP Server for 2FA",
+    desc: "A Flask server deployed onto Amazon EC2 to provide OTPs for 2FA JavaScript and session management and delivering through simple API.",
+    img: "/static/projects/github_project.png",
+    github: "https://github.com/HaseeebA/otpserver",
+    tags: ["Flask", "Python", "EC2", "AWS", "API", "2FA"],
+  },
+  {
+    id: 7,
     title: "Stock Price API",
     desc: "A Flask server deployed with docker onto Google Cloud Run to fetch real time prices of any stock using yfinance.",
     img: "/static/projects/stockapi.png",
@@ -44,7 +68,7 @@ const projects: Project[] = [
     tags: ["Flask", "Python", "Docker", "Google Cloud Run", "API"],
   },
   {
-    id: 5,
+    id: 8,
     title: "Crypto Price API",
     desc: "A Flask server deployed with docker onto Google Cloud Run to fetch real time prices of any cryptocurrency using coingecko.",
     img: "/static/projects/cryptoapi.png",
@@ -52,7 +76,7 @@ const projects: Project[] = [
     tags: ["Flask", "Python", "Docker", "Google Cloud Run", "API"],
   },
   {
-    id: 6,
+    id: 9,
     title: "Remove Background App",
     desc: "A simple web application using AI to remove background from images.",
     img: "/static/projects/bgremove.png",
