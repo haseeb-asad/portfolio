@@ -18,14 +18,14 @@ const projects: Project[] = [
     link: "https://dataclean.tech",
     tags: ["NextJS", "Stripe", "Express", "Vercel", "API", "AI", "NLP"],
   },
-  {
-    id: 2,
-    title: "nextotp.tech",
-    desc: "A SAAS platform that provides OTPs (for 2FA) for your applications using Whatsapp API at a cheap rate.",
-    img: "/static/projects/nextotp.png",
-    link: "https://nextotp.tech",
-    tags: ["NextJS", "Stripe", "whatsapp API", "Express", "Vercel", "API", "AI", "NLP"],
-  },
+  // {
+  //   id: 2,
+  //   title: "nextotp.tech",
+  //   desc: "A SAAS platform that provides OTPs (for 2FA) for your applications using Whatsapp API at a cheap rate.",
+  //   img: "/static/projects/nextotp.png",
+  //   link: "https://nextotp.tech",
+  //   tags: ["NextJS", "Stripe", "whatsapp API", "Express", "Vercel", "API", "AI", "NLP"],
+  // },
   {
     id: 3,
     title: "SecureTeams",
