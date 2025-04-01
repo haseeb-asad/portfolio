@@ -5,18 +5,23 @@ import Page from "@/components/utility/Page";
 import Projects from "@/components/home/Projects";
 import Skills from "@/components/home/Skills";
 import Testimonials from "@/components/home/Testimonials";
-// import { allPosts } from "contentlayer/generated";
-// import { GetStaticProps } from "next";
-
-// export const getStaticProps: GetStaticProps = async () => {
-//   return {
-//     props: {
-//       allPosts: allPosts.sort(({date: dateA}: any, {date: dateB}: any) => dateB - dateA),
-//     },
-//   };
-// }
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    // Load Contra script
+    const script = document.createElement('script');
+    script.src = "https://contra.com/static/embed/sdk.js";
+    script.async = true;
+    script.charset = "utf-8";
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script when component unmounts
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <Page currentPage="Home" meta={{ desc: "I'm a passionate web developer and designer coding beautiful websites and apps." }}>
       <Hero />
@@ -24,6 +29,7 @@ export default function Home() {
         <Projects />
         <Skills />
         <Testimonials />
+        
         {/* <Posts allPosts={allPosts} /> */}
       </div>
       <CTA />

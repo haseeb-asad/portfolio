@@ -2,7 +2,7 @@ import React from "react";
 
 function Heading() {
   return (
-    <div className="py-16 sm:py-20 w-full text-center relative">
+    <div className="pt-16 pb-8 sm:pt-20 sm:pb-0 w-full text-center relative">
       <div className="flex flex-col items-center">
         <h1 className="text-4xl sm:text-6xl inline-block w-auto mb-8 relative">
           About Me
@@ -20,7 +20,7 @@ function Heading() {
           />
         </div>
         <p className="text-fun-gray text-xl sm:text-2xl">
-          I'm a Software Engineer by profession. I love to solve problems and create solutions. In my free time, I love to learn new things and create new projects. My expertise is web and cloud development.
+          I'm a Software Engineer by profession currently working as a SWE at Bazaar Technologies. I work with Spring Boot, Kotlin, and Java as my primary stack and have a solid grasp of many other technologies. I build fun projects in my free time.
         </p>
       </div>
     </div>
