@@ -1,0 +1,10 @@
+# robots.txt for haseebasad.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://haseebasad.vercel.app/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 10

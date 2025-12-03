@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Page currentPage="Home" meta={{ desc: "I'm a passionate web developer and designer coding beautiful websites and apps." }}>
+    <Page currentPage="Home" meta={{ desc: "Software Engineer specializing in full-stack development, mobile applications, and cloud infrastructure. Experienced with React, Node.js, Python, AWS, and Kubernetes. Available for consulting and freelance projects." }}>
       <Hero />
       <div className="mt-20 space-y-32">
         <Projects />

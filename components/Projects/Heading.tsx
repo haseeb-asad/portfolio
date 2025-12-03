@@ -30,9 +30,8 @@ function Heading({ tag }: HeadingProps) {
       )}
       {!tag && (
         <p className="text-fun-gray text-xl sm:text-2xl max-w-3xl m-auto">
-          I've built cool apps and services using a range of different tools.
-          Currently I am working on my own Fintech app, Stay Tuned!
-          Here are some of my favorite projects over the course of my journey. 
+          Full-stack engineer with expertise in scalable web applications, mobile development, and cloud infrastructure.
+          Delivering production-ready solutions for startups and enterprises.
         </p>
       )}
     </div>
