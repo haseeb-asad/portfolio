@@ -7,9 +7,12 @@ import React, { ReactChildren } from "react";
 function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
   const pageTitle = `${
     currentPage === "Home"
-      ? "Haseeb Asad - Web Developer, Creater, Founder."
-      : `${currentPage} - haseebasad.vercel.app`
+      ? "Haseeb Asad - Software Engineer | Full-Stack & Mobile Developer"
+      : `${currentPage} - Haseeb Asad`
   }`;
+  const siteUrl = "https://haseebasad.vercel.app";
+  const ogImage = `${siteUrl}/static/og-image.png`;
+
   console.log(currentPage);
   return (
     <div
@@ -19,6 +22,16 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
       <Head>
         <title>{pageTitle}</title>
 
+        {/* Primary Meta Tags */}
+        <meta name="title" content={pageTitle} />
+        <meta name="description" content={desc} />
+        <meta name="keywords" content="Software Engineer, Full Stack Developer, Mobile Developer, React, Node.js, Python, AWS, Kubernetes, Freelance Developer, Web Development, App Development, DevOps, Haseeb Asad" />
+        <meta name="author" content="Haseeb Asad" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <link rel="canonical" href={siteUrl} />
+
+        {/* Favicon */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -37,18 +50,51 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
           href="/static/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/static/favicon/site.webmanifest" />
-        <meta name="title" content={pageTitle} />
-        <meta name="description" content={desc} />
 
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://haseebasad.vercel.app" />
+        <meta property="og:url" content={siteUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={desc} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:site_name" content="Haseeb Asad Portfolio" />
 
+        {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://braydentw.io/" />
+        <meta property="twitter:url" content={siteUrl} />
         <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={desc} />
+        <meta property="twitter:image" content={ogImage} />
+
+        {/* Structured Data / Schema.org */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Haseeb Asad",
+              url: siteUrl,
+              jobTitle: "Software Engineer",
+              description: desc,
+              sameAs: [
+                "https://github.com/haseeb-asad",
+                "https://www.linkedin.com/in/haseeb-asad/",
+              ],
+              knowsAbout: [
+                "Full Stack Development",
+                "Mobile Development",
+                "Cloud Infrastructure",
+                "DevOps",
+                "React",
+                "Node.js",
+                "Python",
+                "AWS",
+                "Kubernetes",
+              ],
+            }),
+          }}
+        />
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
