@@ -28,15 +28,48 @@ const projects: Project[] = [
   // },
   {
     id: 2,
-    title: "SecureTeams",
-    desc: "A Secure Platform for IT Companies to manage their teams and projects. Secured using encryption in storage and transit. Real-time chat and file sharing using sockets.",
-    img: "/static/projects/secureteams.png",
-    link: "https://secureteams.onrender.com/",
-    github: "https://github.com/haseeb-asad/SecureTeams",
-    tags: ["React", "TailwindCSS", "CSS", "MongoDB", "Socket.io"],
+    title: "BookWithKhelo",
+    desc: "A comprehensive booking platform for sports facilities with mobile apps for both Android and iOS. Enables users to discover, book, and manage sports venue reservations seamlessly.",
+    img: "/static/projects/bookwithkhelo.png",
+    links: [
+      { label: "Website", url: "https://bookwithkhelo.com" },
+      { label: "Android App", url: "https://play.google.com/store/apps/details?id=com.bookwithkhelo" },
+      { label: "iOS App", url: "https://apps.apple.com/app/bookwithkhelo" },
+    ],
+    tags: ["React Native", "Mobile Apps", "Booking System", "iOS", "Android"],
   },
   {
     id: 3,
+    title: "Sehatmand",
+    desc: "A health and wellness platform providing comprehensive healthcare solutions and services.",
+    img: "/static/projects/sehatmand.png",
+    links: [
+      { label: "Website", url: "https://sehatmand.io" },
+    ],
+    tags: ["Healthcare", "Web App", "NextJS"],
+  },
+  {
+    id: 4,
+    title: "Querify",
+    desc: "A powerful query and data management platform designed to simplify complex data operations.",
+    img: "/static/projects/querify.png",
+    links: [
+      { label: "Website", url: "https://querify.tech" },
+    ],
+    tags: ["Data Management", "Query Engine", "Web App"],
+  },
+  {
+    id: 5,
+    title: "NativeOps",
+    desc: "DevOps and infrastructure management platform for native applications and cloud operations.",
+    img: "/static/projects/nativeops.png",
+    links: [
+      { label: "Website", url: "https://nativeops.tech" },
+    ],
+    tags: ["DevOps", "Cloud", "Infrastructure", "Platform"],
+  },
+  {
+    id: 6,
     title: "RAFT Implementatino - Distributed Systems",
     desc: "A simple implementation of the RAFT consensus algorithm in GoLang.",
     img: "/static/projects/github_project.png",
@@ -44,7 +77,7 @@ const projects: Project[] = [
     tags: ["GoLang", "Distributed Systems", "RAFT"],
   },
   {
-    id: 4,
+    id: 7,
     title: "RAG Implementaion, talk to your documents!",
     desc: "A simple implementation of the RAG (Retrieval Augmented Generation) model in Python.",
     img: "/static/projects/github_project.png",
@@ -52,7 +85,7 @@ const projects: Project[] = [
     tags: ["Python", "HuggingFace", "RAG"],
   },
   {
-    id: 5,
+    id: 8,
     title: "OTP Server for 2FA",
     desc: "A Flask server deployed onto Amazon EC2 to provide OTPs for 2FA JavaScript and session management and delivering through simple API.",
     img: "/static/projects/github_project.png",
@@ -60,7 +93,7 @@ const projects: Project[] = [
     tags: ["Flask", "Python", "EC2", "AWS", "API", "2FA"],
   },
   {
-    id: 6,
+    id: 9,
     title: "Stock Price API",
     desc: "A Flask server deployed with docker onto Google Cloud Run to fetch real time prices of any stock using yfinance.",
     img: "/static/projects/stockapi.png",
@@ -68,7 +101,7 @@ const projects: Project[] = [
     tags: ["Flask", "Python", "Docker", "Google Cloud Run", "API"],
   },
   {
-    id: 7,
+    id: 10,
     title: "Crypto Price API",
     desc: "A Flask server deployed with docker onto Google Cloud Run to fetch real time prices of any cryptocurrency using coingecko.",
     img: "/static/projects/cryptoapi.png",
@@ -76,7 +109,7 @@ const projects: Project[] = [
     tags: ["Flask", "Python", "Docker", "Google Cloud Run", "API"],
   },
   {
-    id: 8,
+    id: 11,
     title: "Remove Background App",
     desc: "A simple web application using AI to remove background from images.",
     img: "/static/projects/bgremove.png",

@@ -10,7 +10,7 @@ function ProjectCard({ project }) {
       key={project.id}
     >
       <a
-        href={project.link || project.github}
+        href={project.links?.[0]?.url || project.link || project.github}
         target="_blank"
         className={`w-full relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}
       >
@@ -21,11 +21,31 @@ function ProjectCard({ project }) {
       </a>
       <div className="w-full mt-5">
         <div className="flex projects-center justify-between">
-          <a href={project.link || project.github} target="_blank">
+          <a href={project.links?.[0]?.url || project.link || project.github} target="_blank">
             <h3 className="text-lg font-bold">{project.title}</h3>
           </a>
-          <div className="space-x-2">
-            {project.link && (
+          <div className="space-x-2 flex items-center">
+            {/* New links array support */}
+            {project.links && project.links.map((link, index) => {
+              const isGithub = link.label.toLowerCase().includes('github');
+              const iconSrc = isGithub
+                ? "/static/icons/github.svg"
+                : "/static/icons/external-link.svg";
+
+              return (
+                <a key={index} href={link.url} target="_blank" rel="noreferrer" title={link.label}>
+                  <Image
+                    src={iconSrc}
+                    width={16}
+                    height={16}
+                    alt={`${link.label} Icon`}
+                  />
+                </a>
+              );
+            })}
+
+            {/* Backward compatibility for old link/github fields */}
+            {!project.links && project.link && (
               <a href={project.link} target="_blank" rel="noreferrer">
                 <Image
                   src="/static/icons/external-link.svg"
@@ -35,7 +55,7 @@ function ProjectCard({ project }) {
                 />
               </a>
             )}
-            {project.github && (
+            {!project.links && project.github && (
               <a href={project.github} target="_blank" rel="noreferrer">
                 <Image
                   src="/static/icons/github.svg"
