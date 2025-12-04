@@ -25,7 +25,7 @@ function Footer() {
                         >
                           {item.icon && (
                             <span className="pr-2 -mb-1">
-                              <Image src={item.icon} width={20} height={20} />
+                              <Image src={item.icon} width={20} height={20} alt={item.name} />
                             </span>
                           )}
                           {item.name}
@@ -78,17 +78,17 @@ function Footer() {
         </div>
       </div>
       <div className="max-w-4xl w-full m-auto mt-8 pt-8 sm:mt-4 sm:pt-4 text-center text-fun-gray border-t border-fun-pink-dark">
-        <p className="flex flex-col items-center justify-center space-y-2">
-          <div className="text-sm font-medium">
+        <div className="flex flex-col items-center justify-center space-y-2">
+          <p className="text-sm font-medium">
             © {new Date().getFullYear()} Haseeb Asad. All rights reserved.
-          </div>
-          <div className="text-xs">
+          </p>
+          <p className="text-xs">
             Full Stack Engineer | Mobile App Developer | DevOps Specialist
-          </div>
-          <div className="text-xs">
+          </p>
+          <p className="text-xs">
             Available for freelance projects and consulting opportunities
-          </div>
-        </p>
+          </p>
+        </div>
       </div>
     </footer>
   );

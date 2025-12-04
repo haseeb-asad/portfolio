@@ -30,7 +30,7 @@ function designs() {
       {/* <Projects /> */}
       <More />
       <div className="contra-hire-me-button flex justify-center w-full"
-          data-analyticsUserId="e94f90a4-d3f4-4bd6-9baa-f80e61804e2c"
+          data-analyticsuserid="e94f90a4-d3f4-4bd6-9baa-f80e61804e2c"
           data-theme="light"
           data-username="haseeb_asad"></div>
     </Page>
