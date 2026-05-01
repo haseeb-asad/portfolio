@@ -52,7 +52,6 @@ function PostPage({ filteredProjects, tag }) {
         title: `${capsTag} Projects`,
         desc: `A showcase for all of my ${capsTag} projects.`,
       }}
-      brutalist
     >
       <Heading tag={capsTag} />
       <Projects overwriteProjects={filteredProjects} />

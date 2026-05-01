@@ -14,15 +14,17 @@ export default function Archives() {
     const count = cells.length;
     if (!count) return;
     const angleStep = 360 / count;
-    // Calculate radius so cards don't overlap: half the card width / tan(half the angle)
-    const cardWidth = cells[0]?.offsetWidth || 480;
-    const radius = Math.round((cardWidth / 2) / Math.tan(Math.PI / count));
+
+    // Use known CSS card widths (don't rely on offsetWidth which can be 0 on SSR/prod)
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+    const cardWidth = isMobile ? 290 : 480;
+    // Multiply by 1.6 to add comfortable gap between cards
+    const radius = Math.round((cardWidth / 2) / Math.tan(Math.PI / count) * 1.6);
 
     cells.forEach((cell, index) => {
       cell.style.transform = `rotateY(${index * angleStep}deg) translateZ(${radius}px)`;
     });
 
-    // Update the carousel's initial translateZ to match
     if (carouselRef.current) {
       carouselRef.current.style.transform = `translateZ(-${radius}px) rotateY(0deg)`;
     }

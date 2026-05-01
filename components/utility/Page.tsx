@@ -1,12 +1,9 @@
-import Footer from "../global/Footer";
 import Head from "next/head";
-import MobileNavbar from "../global/MobileNavbar";
-import Navbar from "../global/Navbar";
 import BrutalistNavbar from '@/components/brutalist/BrutalistNavbar';
 import BrutalistFooter from '@/components/brutalist/BrutalistFooter';
-import React, { ReactChildren, useEffect } from "react";
+import React, { useEffect } from "react";
 
-function Page({ currentPage, meta: { title, desc }, children, brutalist }: PageProps) {
+function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
   const pageTitle = `${
     currentPage === "Home"
       ? "Haseeb Asad - Software Engineer | Full-Stack & Mobile Developer"
@@ -16,20 +13,18 @@ function Page({ currentPage, meta: { title, desc }, children, brutalist }: PageP
   const ogImage = `${siteUrl}/static/og-image.png`;
 
   useEffect(() => {
-    if (brutalist) {
-      const prev = document.body.style.background;
-      document.body.style.background = '#ffffff';
-      document.body.style.color = '#000000';
-      return () => {
-        document.body.style.background = prev;
-        document.body.style.color = '';
-      };
-    }
-  }, [brutalist]);
+    const prev = document.body.style.background;
+    document.body.style.background = '#ffffff';
+    document.body.style.color = '#000000';
+    return () => {
+      document.body.style.background = prev;
+      document.body.style.color = '';
+    };
+  }, []);
 
   return (
     <div
-      className={`w-full m-auto flex flex-col items-center justify-center min-h-screen opening-box-animate-paddin ${brutalist ? 'text-black' : 'text-white'} overflow-hidden md:overflow-visible`}
+      className="w-full m-auto flex flex-col items-center justify-center min-h-screen opening-box-animate-paddin text-black overflow-hidden md:overflow-visible"
       style={{ maxWidth: "1200px" }}
     >
       <Head>
@@ -142,21 +137,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
       ></noscript>
 
       <main className="p-5 w-full flex-1 text-center">
-        {brutalist ? (
-          <BrutalistNavbar currentPage={currentPage} />
-        ) : (
-          <>
-            <div className="hidden sm:block z-100">
-              <Navbar currentPage={currentPage} />
-            </div>
-            <div className="-m-5 block sm:hidden z-100">
-              <MobileNavbar />
-            </div>
-          </>
-        )}
+        <BrutalistNavbar currentPage={currentPage} />
         {children}
       </main>
-      {brutalist ? <BrutalistFooter /> : <Footer />}
+      <BrutalistFooter />
     </div>
   );
 }
@@ -170,5 +154,4 @@ type PageProps = {
     desc: string;
   };
   children?: JSX.Element | JSX.Element[];
-  brutalist?: boolean;
 };

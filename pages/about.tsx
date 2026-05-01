@@ -1,7 +1,7 @@
 import Heading from "components/designs/Heading";
 import More from "components/designs/More";
 import Page from "components/utility/Page";
-import Projects from "components/designs/Designs";
+
 import React from "react";
 import { useEffect } from "react";
 
@@ -25,7 +25,6 @@ function designs() {
     <Page
       currentPage="About Me"
       meta={{ desc: "I'm an avid self-taught designer too! I publish all my web and creative designs on Dribbble also." }}
-      brutalist
     >
       <Heading />
       {/* <Projects /> */}

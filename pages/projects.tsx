@@ -12,7 +12,6 @@ function projects() {
     <Page
       currentPage="Projects"
       meta={{ title: "Projects", desc: "Full-stack software engineer portfolio featuring client work and personal projects. Specialized in React, Node.js, Python, AWS, Kubernetes, and mobile development." }}
-      brutalist
     >
       <Heading />
 
