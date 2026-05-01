@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&family=Fragment+Mono:ital@0;1&display=swap");
 
 body {
   width: 100%;
@@ -305,4 +305,129 @@ pre {
 /* All svg squiggle decorations */
 .sqD {
   @apply absolute z-[-10];
+}
+
+/* ---- BRUTALIST DESIGN SYSTEM ---- */
+
+@font-face {
+  font-family: 'Geist Pixel';
+  src: url('/static/fonts/GeistPixel-Line.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes blur-text {
+  0% { filter: blur(0px); }
+  100% { filter: blur(4px); }
+}
+
+@media (max-width: 768px) {
+  .facilities-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .facilities-grid > div {
+    border-right: none !important;
+    border-bottom: 1px solid #000;
+  }
+  .facilities-grid > div:last-child {
+    border-bottom: none;
+  }
+
+  /* Hero mobile: overlay canvas behind text */
+  .brutalist-hero {
+    position: relative !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+  }
+  .brutalist-hero-left {
+    position: relative !important;
+    width: 100% !important;
+    min-width: unset !important;
+    height: 100% !important;
+    z-index: 2 !important;
+    background: transparent !important;
+  }
+  .brutalist-hero-nav {
+    position: fixed !important;
+    width: 100% !important;
+    min-width: unset !important;
+    padding: 16px 20px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    z-index: 50 !important;
+  }
+  .brutalist-hero-nav-links {
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+  }
+  .brutalist-hero-nav-links .nav-dot {
+    display: none !important;
+  }
+  .brutalist-hero-content {
+    left: 20px !important;
+    right: 20px !important;
+    width: calc(100% - 40px) !important;
+    top: 16vh !important;
+  }
+  .brutalist-hero-right {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    opacity: 0.35 !important;
+  }
+  .brutalist-hero-notes {
+    height: auto !important;
+  }
+  .brutalist-hero-note {
+    position: relative !important;
+    left: 0 !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin-bottom: 16px;
+  }
+
+  /* Career carousel mobile: 20% smaller */
+  .career-carousel {
+    width: 320px !important;
+    height: 420px !important;
+  }
+  .career-card {
+    width: 290px !important;
+    height: 380px !important;
+  }
+  .career-card h4 {
+    font-size: 22px !important;
+  }
+
+  /* Manifesto mobile: single column */
+  .brutalist-manifesto-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 80px 20px !important;
+  }
+
+  /* Contact mobile */
+  .brutalist-contact {
+    padding: 80px 20px !important;
+  }
+  .brutalist-contact-inner {
+    flex-direction: column !important;
+    gap: 48px !important;
+  }
+  .brutalist-contact-photo img {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+  }
 }

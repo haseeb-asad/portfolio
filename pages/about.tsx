@@ -25,6 +25,7 @@ function designs() {
     <Page
       currentPage="About Me"
       meta={{ desc: "I'm an avid self-taught designer too! I publish all my web and creative designs on Dribbble also." }}
+      brutalist
     >
       <Heading />
       {/* <Projects /> */}

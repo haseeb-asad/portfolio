@@ -64,7 +64,7 @@ export const footer: Footer = {
         },
         {
           name: "About Me",
-          link: "/designs",
+          link: "/about",
           leavesWebsite: false,
         },
       ],
