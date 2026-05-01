@@ -1,8 +1,7 @@
-import Footer from "../global/Footer";
 import Head from "next/head";
-import MobileNavbar from "../global/MobileNavbar";
-import Navbar from "../global/Navbar";
-import React, { ReactChildren } from "react";
+import BrutalistNavbar from '@/components/brutalist/BrutalistNavbar';
+import BrutalistFooter from '@/components/brutalist/BrutalistFooter';
+import React, { useEffect } from "react";
 
 function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
   const pageTitle = `${
@@ -13,10 +12,19 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
   const siteUrl = "https://haseebasad.vercel.app";
   const ogImage = `${siteUrl}/static/og-image.png`;
 
-  console.log(currentPage);
+  useEffect(() => {
+    const prev = document.body.style.background;
+    document.body.style.background = '#ffffff';
+    document.body.style.color = '#000000';
+    return () => {
+      document.body.style.background = prev;
+      document.body.style.color = '';
+    };
+  }, []);
+
   return (
     <div
-      className="w-full m-auto flex flex-col items-center justify-center min-h-screen opening-box-animate-paddin text-white overflow-hidden md:overflow-visible"
+      className="w-full m-auto flex flex-col items-center justify-center min-h-screen opening-box-animate-paddin text-black overflow-hidden md:overflow-visible"
       style={{ maxWidth: "1200px" }}
     >
       <Head>
@@ -129,15 +137,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
       ></noscript>
 
       <main className="p-5 w-full flex-1 text-center">
-        <div className="hidden sm:block z-100">
-          <Navbar currentPage={currentPage} />
-        </div>
-        <div className="-m-5 block sm:hidden z-100">
-          <MobileNavbar />
-        </div>
+        <BrutalistNavbar currentPage={currentPage} />
         {children}
       </main>
-      <Footer />
+      <BrutalistFooter />
     </div>
   );
 }
