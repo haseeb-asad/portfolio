@@ -6,7 +6,7 @@ const clientProjects: Project[] = [
     id: 0,
     title: "BookWithKhelo",
     desc: "A comprehensive booking platform for sports facilities with mobile apps for both Android and iOS. Enables users to discover, book, and manage sports venue reservations seamlessly across Pakistan.",
-    img: "/static/projects/bookwithkhelo.png",
+    img: "/static/images/project-nebula.jpg",
     links: [
       { label: "Website", url: "https://bookwithkhelo.com" },
       { label: "Android App", url: "https://play.google.com/store/apps/details?id=com.bookwithkhelo" },
@@ -18,7 +18,7 @@ const clientProjects: Project[] = [
     id: 1,
     title: "Sehatmand",
     desc: "A comprehensive health and wellness platform providing healthcare solutions and services. Built to streamline healthcare management and patient care.",
-    img: "/static/projects/sehatmand.png",
+    img: "/static/images/project-echo.jpg",
     links: [
       { label: "Website", url: "https://sehatmand.io" },
     ],
@@ -28,7 +28,7 @@ const clientProjects: Project[] = [
     id: 2,
     title: "Querify",
     desc: "A powerful query and data management platform designed to simplify complex data operations. Enables efficient data querying and analytics for businesses.",
-    img: "/static/projects/querify.png",
+    img: "/static/images/project-terra.jpg",
     links: [
       { label: "Website", url: "https://querify.tech" },
     ],
@@ -38,7 +38,7 @@ const clientProjects: Project[] = [
     id: 3,
     title: "NativeOps",
     desc: "DevOps and infrastructure management platform for native applications and cloud operations. Streamlines deployment, monitoring, and scaling of cloud-native applications.",
-    img: "/static/projects/nativeops.png",
+    img: "/static/images/project-mnemosyne.jpg",
     links: [
       { label: "Website", url: "https://nativeops.tech" },
     ],
