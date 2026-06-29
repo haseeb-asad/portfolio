@@ -2,20 +2,20 @@ import Link from "next/link";
 import React from "react";
 import SectionTitle from "../global/SectionTitle";
 import ProjectCard from "../Projects/ProjectCard1";
-import clientProjects from "@/data/content/clientProjects";
+import projects from "@/data/content/projects";
 
 function Projects() {
   return (
     <div className="flex flex-col text-left justify-between pt-8 relative">
       <div id="learnmore">
-        <SectionTitle title="Client Work & Professional Projects" />
+        <SectionTitle title="Client Work & Projects" />
       </div>
       <p className="text-fun-gray text-center mb-8 max-w-3xl mx-auto">
         Delivering scalable, production-ready solutions for businesses and startups.
         Specialized in full-stack development, mobile applications, and cloud infrastructure.
       </p>
       <div className="grid grid-cols-1 gap-12 md:gap-5 md:grid-cols-3 items-start">
-        {clientProjects.slice(0, 3).map((item) => {
+        {projects.slice(0, 3).map((item) => {
           return (
             <ProjectCard key={item.id} project={item} />
           );
