@@ -12,18 +12,20 @@ function ProjectCard({ project }) {
       <a
         href={project.links?.[0]?.url || project.link || project.github}
         target="_blank"
-        className={`w-full relative border border-black transition-opacity hover:opacity-70`}
+        className={`w-full relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}
       >
         <img
-          className="w-full"
+          className="w-full rounded-md aspect-video object-cover"
           src={project.img}
-          style={{ filter: 'grayscale(100%)' }}
+          alt={project.title}
+          loading="lazy"
+          decoding="async"
         />
       </a>
       <div className="w-full mt-5">
         <div className="flex projects-center justify-between">
           <a href={project.links?.[0]?.url || project.link || project.github} target="_blank">
-            <h3 className="text-lg font-bold uppercase tracking-wide text-sm">{project.title}</h3>
+            <h3 className="text-lg font-bold">{project.title}</h3>
           </a>
           <div className="space-x-2 flex items-center">
             {/* New links array support */}
@@ -68,13 +70,13 @@ function ProjectCard({ project }) {
             )}
           </div>
         </div>
-        <p className="opacity-60 text-left text-sm">{project.desc}</p>
+        <p className="text-fun-gray text-left text-sm">{project.desc}</p>
         <ul className="flex flex-wrap items-center mt-2 -ml-2 list-none">
           {project.tags.map((tag, index) => {
             return (
               <li key={tag}>
                 <Link href={`/projects/tag/${kebabCase(tag)}`}>
-                  <div className="m-1 border border-black text-xs uppercase tracking-wide py-1 px-2 cursor-pointer hover:bg-black hover:text-white transition-colors">
+                  <div className="m-1 rounded-lg text-sm bg-fun-pink-dark py-1 px-2 cursor-pointer hover:opacity-75">
                     {tag}
                   </div>
                 </Link>

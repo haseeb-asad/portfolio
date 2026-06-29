@@ -6,9 +6,8 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ["IBM Plex Mono", "Inter", "system-ui", "sans"],
-      mono: ["IBM Plex Mono", "monospace"],
-      pixel: ["Geist Pixel", "monospace"],
+      sans: ["Be Vietnam Pro", "Inter", "system-ui", "sans"],
+      monospace: ["DM Mono", "monospace"],
     },
     colors: {
       black: colors.black,
@@ -24,10 +23,6 @@ module.exports = {
     pink: colors.pink,
     },
     extend: {
-      fontFamily: {
-        mono: ["IBM Plex Mono", "monospace"],
-        pixel: ["Geist Pixel", "monospace"],
-      },
       colors: {
         bg: "#000a1f",
         "fun-gray-light": "#b2bbcf",
@@ -49,20 +44,10 @@ module.exports = {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
-        },
-        pulse: {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.3' },
-        },
-        'blur-text': {
-          '0%': { filter: 'blur(0px)' },
-          '100%': { filter: 'blur(4px)' },
-        },
+        }
       },
       animation: {
         'fadeInAndBounce': 'fadeIn 3s ease-out',
-        'pulse-slow': 'pulse 2s ease-in-out infinite',
-        'blur-text': 'blur-text 1s ease-out forwards',
       },
       willChange: {
         'projectCard': 'border-color, opacity, transform',
@@ -74,6 +59,5 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require("tailwindcss-animate"),
   ],
 };
