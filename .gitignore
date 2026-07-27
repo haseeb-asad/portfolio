@@ -36,3 +36,6 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+
+# browser automation artifacts
+.playwright-mcp

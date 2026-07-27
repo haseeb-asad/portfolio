@@ -19,27 +19,27 @@ type Experience = {
 export const experience: Experience[] = [
   {
     company: "Ignite Tech",
-    role: "AI-First Full Stack Engineer",
+    role: "AI-First Senior Software Engineer",
     tech: "AI / Full Stack",
     current: true,
     url: "https://www.linkedin.com/company/ignite-tech",
   },
   {
     company: "Khoros",
-    role: "AI-First Full Stack Engineer",
+    role: "AI-First Senior Software Engineer",
     tech: "AI / Full Stack",
     current: true,
     url: "https://www.linkedin.com/company/khoros/",
   },
   {
     company: "Glow",
-    role: "Full Stack Engineer",
+    role: "Lead Software Engineer",
     tech: "Full Stack",
     url: "https://www.linkedin.com/company/glowinsurance",
   },
   {
     company: "Bazaar",
-    role: "Backend Engineer",
+    role: "Software Engineer II",
     tech: "Spring Boot / Kotlin / Java",
     url: "https://www.linkedin.com/company/bazaartechnologies/",
   },

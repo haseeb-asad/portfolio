@@ -20,7 +20,7 @@ function Heading() {
           />
         </div>
         <p className="text-fun-gray text-xl sm:text-2xl">
-          I'm a Software Engineer by profession currently working as a SWE at Bazaar Technologies. I work with Spring Boot, Kotlin, and Java as my primary stack and have a solid grasp of many other technologies. I build fun projects in my free time.
+          I'm an AI-First Senior Software Engineer at Khoros (IgniteTech), where I own the Member Experience track end-to-end and ship full-stack across React/TypeScript and Java/GraphQL. I came up through backend and platform work with Spring Boot, Kotlin, and Java, and I lean hard on AI-augmented workflows to ship faster. I build fun projects in my free time.
         </p>
       </div>
     </div>

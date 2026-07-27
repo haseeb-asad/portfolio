@@ -24,7 +24,7 @@ function designs() {
   return (
     <Page
       currentPage="About Me"
-      meta={{ desc: "I'm an avid self-taught designer too! I publish all my web and creative designs on Dribbble also." }}
+      meta={{ desc: "AI-First Senior Software Engineer at Khoros (IgniteTech), shipping full-stack across React/TypeScript and Java/GraphQL with a backend and platform background." }}
     >
       <Heading />
       {/* <Projects /> */}
