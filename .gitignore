@@ -39,3 +39,6 @@ yarn-error.log*
 
 # browser automation artifacts
 .playwright-mcp
+
+# typescript incremental build cache
+*.tsbuildinfo

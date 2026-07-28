@@ -1,6 +1,6 @@
-import Page from "components/utility/Page";
+import Page from "@/components/utility/Page";
 import React from "react";
-import Resume from "components/resume/Resume";
+import Resume from "@/components/resume/Resume";
 
 function resume() {
   return (

@@ -1,4 +1,4 @@
-import Page from "components/utility/Page";
+import Page from "@/components/utility/Page";
 
 import { GetStaticProps, GetStaticPaths } from "next";
 import { allKebabTags, allTags } from "@/data/content/projects";

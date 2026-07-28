@@ -1,6 +1,6 @@
 import React from "react";
 import projects from "@/data/content/projects";
-import { Project } from "types";
+import { Project } from "@/types";
 import { kebabCase } from "@/utils/utils";
 import Link from "next/link";
 import Image from "next/image";

@@ -1,6 +1,6 @@
 import Heading from "@/components/Projects/Heading";
 import More from "@/components/Projects/More";
-import Page from "components/utility/Page";
+import Page from "@/components/utility/Page";
 import Projects from "@/components/Projects/Projects";
 import React from "react";
 import projects from "@/data/content/projects";
