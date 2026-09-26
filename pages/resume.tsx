@@ -7,7 +7,7 @@ function resume() {
     <Page
       currentPage="Resume"
       meta={{
-        desc: "The latest resume of Haseeb Asad — AI-First Senior Software Engineer working across React/TypeScript, Java/GraphQL, and cloud infrastructure.",
+        desc: "Resume of Haseeb Asad, software engineer at Oasys and founder of Codex Labs. Full-stack across React/TypeScript, Java/GraphQL and cloud infrastructure.",
       }}
     >
       <Resume />

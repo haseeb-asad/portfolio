@@ -15,16 +15,17 @@ function Resume() {
           <img
             className="sqD w-12 -top-6 -right-8 absolute"
             src="/static/doodles/skills/fillStar.svg"
-            alt="Decorative star"
+            alt=""
           />
         </h1>
         <p className="text-fun-gray text-lg sm:text-xl max-w-2xl mb-2">
-          AI-First Senior Software Engineer at Khoros (IgniteTech). Full-stack
+          Software engineer at Oasys and founder of Codex Labs. Previously
+          AI-First Senior Software Engineer at Khoros (IgniteTech), full-stack
           across React/TypeScript and Java/GraphQL, with a backend and platform
           background.
         </p>
         <p className="text-fun-gray-medium text-sm mb-8">
-          Last updated {RESUME_UPDATED}
+          PDF last updated {RESUME_UPDATED}, before I joined Oasys
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">

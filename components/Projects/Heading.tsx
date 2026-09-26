@@ -14,6 +14,7 @@ function Heading({ tag }: HeadingProps) {
           <h1 className="text-3xl sm:text-4xl inline-block w-auto mx-auto mb-8 relative">
             Projects built with <b>{tag}</b>
             <img
+              alt=""
               className="sqD w-8 sm:w-10 -top-6 -right-2 sm:-right-8 sm:-top-8 absolute"
               src="/static/doodles/hero/code.svg"
             />
@@ -23,6 +24,7 @@ function Heading({ tag }: HeadingProps) {
         <h1 className="text-4xl sm:text-6xl inline-block w-auto mx-auto mb-8 relative">
           Projects
           <img
+            alt=""
             className="sqD w-10 -top-8 -right-8 absolute"
             src="/static/doodles/hero/code.svg"
           />
@@ -30,8 +32,9 @@ function Heading({ tag }: HeadingProps) {
       )}
       {!tag && (
         <p className="text-fun-gray text-xl sm:text-2xl max-w-3xl m-auto">
-          Full-stack engineer with expertise in scalable web applications, mobile development, and cloud infrastructure.
-          Delivering production-ready solutions for startups and enterprises.
+          Products I have built and shipped: an AI coding observability
+          platform, native macOS apps, a sports venue booking platform with
+          iOS and Android apps, and more.
         </p>
       )}
     </div>

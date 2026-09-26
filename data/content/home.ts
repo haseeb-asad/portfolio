@@ -18,17 +18,24 @@ type Experience = {
 
 export const experience: Experience[] = [
   {
-    company: "Ignite Tech",
-    role: "AI-First Senior Software Engineer",
-    tech: "AI / Full Stack",
+    // Title and start date (Sep 2026) not yet confirmed; see lib/site.ts.
+    company: "Oasys",
+    role: "Software Engineer",
+    tech: "Software for therapy group practices",
     current: true,
-    url: "https://www.linkedin.com/company/ignite-tech",
+    url: "https://oasys.health",
   },
   {
-    company: "Khoros",
+    company: "Codex Labs",
+    role: "Founder",
+    tech: "Automation, AI agents, web, mobile and macOS apps",
+    current: true,
+    url: "https://www.codex-labs.dev",
+  },
+  {
+    company: "Khoros (IgniteTech)",
     role: "AI-First Senior Software Engineer",
     tech: "AI / Full Stack",
-    current: true,
     url: "https://www.linkedin.com/company/khoros/",
   },
   {
@@ -132,6 +139,6 @@ export const testimonials: Testimonial[] = [
     quote:
       "My vision was executed perfectly. The quality and speed of the work was excellent.",
     name: "Katie Jones",
-    job: "Clientyarn",
+    job: "Client",
   },
 ];

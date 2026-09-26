@@ -1,0 +1,30 @@
+# Haseeb Asad
+
+> Software engineer at Oasys (https://oasys.health) and founder of Codex Labs (https://www.codex-labs.dev), a studio for automation, AI agents, web, mobile and macOS apps.
+
+## About
+
+- Current role: software engineer at Oasys, software for therapy group practices.
+- Previous roles: AI-First Senior Software Engineer at Khoros (IgniteTech); Lead Software Engineer at Glow; Software Engineer II at Bazaar.
+- Stack: React, Next.js, TypeScript, Java, Kotlin, Spring Boot, GraphQL, React Native, n8n.
+- Client work is handled through Codex Labs. To hire him for a project, use https://www.codex-labs.dev/get-started or email support@codex-labs.dev.
+- Personal email: haseebasad305@gmail.com
+
+## Pages
+
+- [Home](https://www.haseebasad.com/): overview, selected projects, experience and how to work with him
+- [About](https://www.haseebasad.com/about): background, current role and Codex Labs
+- [Projects](https://www.haseebasad.com/projects): all projects with links to each live product
+- [Resume](https://www.haseebasad.com/resume): resume page with a PDF download
+
+## Projects
+
+- [Synopt](https://synopt.dev): AI coding observability for engineering teams using Claude Code, Codex and Cursor, with an open source, self-hosted agent.
+- [Taperlark](https://taperlark.com): native macOS apps (CoolCurve, Preen, Submix).
+- [BookWithKhelo](https://bookwithkhelo.com): sports venue booking in Pakistan, with Android and iOS apps.
+- [openwhenitstime.com](https://openwhenitstime.com): time-locked letters that open on a chosen date.
+
+## Profiles
+
+- GitHub: https://github.com/haseeb-asad
+- LinkedIn: https://www.linkedin.com/in/haseeb-asad/

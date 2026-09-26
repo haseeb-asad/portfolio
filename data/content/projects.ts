@@ -5,7 +5,7 @@ const projects: Project[] = [
   {
     id: 0,
     title: "Synopt",
-    desc: "An AI observability control plane for engineering orgs — usage analytics, per-team cost attribution, and secret detection across Claude Code, Codex and Cursor in one dashboard. The agent is open source and self-hosted, so prompt telemetry never leaves your own infrastructure.",
+    desc: "An AI observability control plane for engineering orgs: usage analytics, per-team cost attribution, and secret detection across Claude Code, Codex and Cursor in one dashboard. The agent is open source and self-hosted, so prompt telemetry never leaves your own infrastructure.",
     img: "/static/images/project-synopt.svg",
     links: [
       { label: "Website", url: "https://synopt.dev" },
@@ -27,7 +27,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: "BookWithKhelo",
-    desc: "A comprehensive booking platform for sports facilities with mobile apps for both Android and iOS. Enables users to discover, book, and manage sports venue reservations seamlessly across Pakistan.",
+    desc: "A comprehensive booking platform for sports facilities with mobile apps for both Android and iOS. Users discover, book and manage sports venue reservations across Pakistan.",
     img: "/static/images/project-bookwithkhelo.svg",
     links: [
       { label: "Website", url: "https://bookwithkhelo.com" },

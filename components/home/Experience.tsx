@@ -7,13 +7,13 @@ function Experience() {
     <div className="flex flex-col text-left justify-between pt-8 relative">
       <SectionTitle title="Where I've Worked" />
       <p className="text-fun-gray text-center mb-8 max-w-3xl mx-auto">
-        Building scalable products across AI, fintech, and enterprise platforms.
+        Product engineering across healthcare, AI, fintech and enterprise software.
       </p>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {experience.map((item, index) => {
           const Wrapper: any = item.url ? "a" : "div";
           const wrapperProps = item.url
-            ? { href: item.url, target: "_blank", rel: "noreferrer" }
+            ? { href: item.url, target: "_blank", rel: "noopener" }
             : {};
           return (
             <Wrapper

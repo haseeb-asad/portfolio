@@ -17,7 +17,7 @@ function ProjectCard({ project }) {
         <img
           className="w-full rounded-md aspect-video object-cover"
           src={project.img}
-          alt={project.title}
+          alt={`${project.title} project cover`}
           loading="lazy"
           decoding="async"
         />

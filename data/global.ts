@@ -1,3 +1,5 @@
+import { CODEX_LABS, PERSON } from "@/lib/site";
+
 type Route = {
   title: string,
   path: string
@@ -15,11 +17,6 @@ type FooterCol = {
 
 type Footer = {
   columns: FooterCol[]
-  support: {
-    buymeacoffee: string
-    paypal: string
-    message: string
-  }
 };
 
 export const routes: Route[] = [
@@ -42,6 +39,10 @@ export const routes: Route[] = [
   {
     title: "About Me",
     path: "/about",
+  },
+  {
+    title: "Work with me",
+    path: "/#work-with-me",
   },
 ];
 
@@ -83,28 +84,43 @@ export const footer: Footer = {
       links: [
         {
           name: "GitHub",
-          link: "https://github.com/haseeb-asad",
+          link: PERSON.github,
           icon: "/static/icons/github-f.svg",
           leavesWebsite: true,
         },
         {
           name: "LinkedIn",
-          link: "https://www.linkedin.com/in/haseeb-asad/",
+          link: PERSON.linkedin,
           icon: "/static/icons/linkedin-f.svg",
           leavesWebsite: true,
         },
         {
           name: "Email",
-          link: "mailto:haseebasad305@gmail.com",
+          link: `mailto:${PERSON.email}`,
           icon: "/static/icons/mail-f.svg",
           leavesWebsite: true,
         },
       ],
     },
+    {
+      title: "Work with me",
+      links: [
+        {
+          name: "Start a project",
+          link: CODEX_LABS.getStarted,
+          leavesWebsite: true,
+        },
+        {
+          name: "Codex Labs",
+          link: `${CODEX_LABS.url}/`,
+          leavesWebsite: true,
+        },
+        {
+          name: CODEX_LABS.email,
+          link: `mailto:${CODEX_LABS.email}`,
+          leavesWebsite: true,
+        },
+      ],
+    },
   ],
-  support: {
-    buymeacoffee: "braydenw",
-    paypal: "braydentw",
-    message: "Thankyou! 💙",
-  },
 };
