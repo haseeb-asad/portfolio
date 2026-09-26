@@ -48,9 +48,10 @@ function PostPage({ filteredProjects, tag }) {
   return (
     <Page
       currentPage="Projects"
+      noindex
       meta={{
         title: `${capsTag} Projects`,
-        desc: `A showcase for all of my ${capsTag} projects.`,
+        desc: `Projects by Haseeb Asad tagged ${capsTag}.`,
       }}
     >
       <Heading tag={capsTag} />

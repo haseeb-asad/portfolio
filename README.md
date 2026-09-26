@@ -1,8 +1,8 @@
-# Haseeb Asad — Portfolio
+# Haseeb Asad: personal site
 
-Personal portfolio and project showcase for Haseeb Asad, Full-Stack Engineer.
+Personal site of Haseeb Asad: software engineer at Oasys and founder of Codex Labs.
 
-**Live:** [haseebasad.vercel.app](https://haseebasad.vercel.app)
+**Live:** [www.haseebasad.com](https://www.haseebasad.com)
 
 ---
 
@@ -17,25 +17,29 @@ Personal portfolio and project showcase for Haseeb Asad, Full-Stack Engineer.
 
 ```
 pages/
-  index.tsx              # Homepage (hero, projects, experience, skills, testimonials)
+  index.tsx              # Homepage (hero, projects, experience, skills, work with me)
   projects.tsx           # Full projects list (client work + personal projects)
   projects/tag/[tag].tsx # Projects filtered by tag
   about.tsx              # About page
 components/
-  home/                  # Homepage sections (Hero, Projects, Experience, Skills, Testimonials, CTA)
+  home/                  # Homepage sections (Hero, Projects, Experience, Skills, CTA)
   Projects/              # Project card and grid components
   designs/               # About page components
   global/                # Navbar, MobileNavbar, Footer, SectionTitle
   utility/
-    Page.tsx             # Page shell (SEO, analytics)
+    Page.tsx             # Page shell: canonical, OG, JSON-LD
     Reveal.tsx           # Scroll-reveal wrapper (IntersectionObserver)
 data/
   content/
     projects.ts          # Personal projects
-    clientProjects.ts    # Client work
-    home.ts              # Skills, testimonials, experience (career history)
-    designs.ts           # About page content
+    home.ts              # Skills, experience (career history)
   global.ts              # Routes and footer
+lib/
+  site.ts                # SITE_URL, identity, Oasys and Codex Labs links
+  structured-data.ts     # Person, WebSite, ProfilePage JSON-LD
+scripts/
+  verify-seo-build.mjs   # checks built HTML (yarn build && yarn verify:seo)
+  ping-indexnow.sh       # IndexNow submit, dry run unless --execute
 public/static/
   images/                # Project images
   doodles/               # Decorative SVGs
@@ -54,11 +58,23 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Content
 
-- **Projects** — edit [`data/content/clientProjects.ts`](data/content/clientProjects.ts) (client work) and [`data/content/projects.ts`](data/content/projects.ts) (personal projects).
-- **Career history** — edit the `experience` list in [`data/content/home.ts`](data/content/home.ts).
-- **Skills & testimonials** — also in [`data/content/home.ts`](data/content/home.ts).
-- **Navigation & footer** — [`data/global.ts`](data/global.ts).
+- **Projects**: edit [`data/content/projects.ts`](data/content/projects.ts).
+- **Career history**: edit the `experience` list in [`data/content/home.ts`](data/content/home.ts).
+- **Skills**: also in [`data/content/home.ts`](data/content/home.ts).
+- **Navigation & footer**: [`data/global.ts`](data/global.ts).
 
 ## Deployment
 
-Pushes to `main` auto-deploy via Vercel.
+Pushes to `main` auto-deploy via Vercel. The canonical host is
+`https://www.haseebasad.com`; `haseebasad.vercel.app` 308s to it (see
+`next.config.js`). Analytics is Vercel Web Analytics (`@vercel/analytics`),
+which must be enabled in the Vercel project dashboard.
+
+Before merging SEO-affecting changes:
+
+```bash
+yarn typecheck && yarn build && yarn verify:seo
+```
+
+After a production deploy: `yarn indexnow` (dry run), then
+`yarn indexnow --execute`.

@@ -10,7 +10,7 @@ function ProjectsPage() {
   return (
     <Page
       currentPage="Projects"
-      meta={{ title: "Projects", desc: "Full-stack software engineer portfolio featuring client work and personal projects. Specialized in React, Node.js, Python, AWS, Kubernetes, and mobile development." }}
+      meta={{ title: "Projects", desc: "Projects built by Haseeb Asad: Synopt AI coding observability, Taperlark macOS apps, BookWithKhelo venue booking, openwhenitstime.com and more." }}
     >
       <Heading />
 
@@ -21,7 +21,7 @@ function ProjectsPage() {
               Client Work & Projects
             </h2>
             <p className="text-fun-gray text-center max-w-2xl mx-auto">
-              Production applications and side projects, featuring scalable architecture and modern tech stacks
+              Production applications and side projects, with links to each live product.
             </p>
           </div>
           <Projects overwriteProjects={projects} />

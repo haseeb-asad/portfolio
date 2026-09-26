@@ -42,6 +42,7 @@ export default function MobileNavbar() {
               className="mr-3"
               src="/static/logos/logo.svg"
               width="100"
+              alt="Haseeb Asad, home"
             />
           </Link>
         </li>
@@ -63,11 +64,19 @@ export default function MobileNavbar() {
           {routes.map((item, index) => {
             return (
               <li
+                key={item.path}
                 className="border-b border-gray-900 text-gray-100 text-sm font-semibold"
                 style={{ transitionDelay: `${150 + index * 25}ms` }}
               >
-                <Link href={item.path}>
-                  <a className="flex w-auto pb-4">{item.title}</a>
+                <Link
+                  href={item.path}
+                  className="flex w-auto pb-4"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    document.body.style.overflow = "";
+                  }}
+                >
+                  {item.title}
                 </Link>
               </li>
             );

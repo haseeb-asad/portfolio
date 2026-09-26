@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import React, { useState } from "react";
 import { randomNumberText } from "@/utils/utils";
@@ -12,6 +13,10 @@ function Page404() {
 
   return (
     <>
+      <Head>
+        <title>Page not found | Haseeb Asad</title>
+        <meta name="robots" content="noindex" />
+      </Head>
       {num404 !== "0000" && (
         <div className="min-h-screen w-full flex items-center justify-center flex-col animate-fadeIn">
           <h1 className="text-7xl text-white font-monospace font-bold opacity-100">{`{ error: ${num404} }`}</h1>

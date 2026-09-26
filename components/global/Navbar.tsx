@@ -6,12 +6,13 @@ function Navbar({ currentPage }) {
   return (
     <nav className="flex items-center justify-between">
       <li className="list-none font-bold text-lg cursor-pointer">
-        <Link href="/">
+        <Link href="/" aria-label="Haseeb Asad, home">
           <span className="font-black text-xl flex items-center">
             <img
               className="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500"
               src="/static/logos/h-mark.svg"
               width="44"
+              alt=""
             />
             {"HaseebA".split("").map((letter, index) => {
               return (

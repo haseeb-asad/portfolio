@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { footer } from "@/data/global";
 import Image from "next/image";
+import { CODEX_LABS, OASYS } from "@/lib/site";
 
 function Footer() {
   return (
@@ -21,11 +22,12 @@ function Footer() {
                         <a
                           href={item.link}
                           target="_blank"
-                          className="items-center flex"
+                          rel="noopener"
+                          className="items-center flex break-all"
                         >
                           {item.icon && (
                             <span className="pr-2 -mb-1">
-                              <Image src={item.icon} width={20} height={20} alt={item.name} />
+                              <Image src={item.icon} width={20} height={20} alt="" />
                             </span>
                           )}
                           {item.name}
@@ -40,42 +42,6 @@ function Footer() {
             </div>
           );
         })}
-        <div className="text-center col-span-2 sm:col-auto sm:text-left pt-8 sm:mt-0 sm:pt-0 text-fun-gray border-t border-fun-pink-dark sm:border-0">
-          {/* <h4 className="uppercase text-fun-gray text-sm font-bold">
-            Support My Work
-          </h4> */}
-          <div className="space-y-2 mt-4 w-full flex items-center sm:items-start flex-col">
-            {/* {footer.support.buymeacoffee !== "" && (
-              <div>
-                <a
-                  href={`https://buymeacoffee.com/${footer.support.buymeacoffee}`}
-                  target="_blank"
-                >
-                  <img
-                    src="/static/misc/buy-me-a-coffee.svg"
-                    className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity"
-                  />
-                </a>
-              </div>
-            )} */}
-            {/* {footer.support.paypal !== "" && (
-              <div>
-                <a
-                  href={`https://paypal.me/${footer.support.paypal}`}
-                  target="_blank"
-                >
-                  <img
-                    src="/static/misc/paypal.svg"
-                    className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity"
-                  />
-                </a>
-              </div>
-            )} */}
-            <p className="text-fun-gray text-xs pt-1">
-              {footer.support.message}
-            </p>
-          </div>
-        </div>
       </div>
       <div className="max-w-4xl w-full m-auto mt-8 pt-8 sm:mt-4 sm:pt-4 text-center text-fun-gray border-t border-fun-pink-dark">
         <div className="flex flex-col items-center justify-center space-y-2">
@@ -83,10 +49,11 @@ function Footer() {
             © {new Date().getFullYear()} Haseeb Asad. All rights reserved.
           </p>
           <p className="text-xs">
-            Full Stack Engineer | Mobile App Developer | DevOps Specialist
-          </p>
-          <p className="text-xs">
-            Available for freelance projects and consulting opportunities
+            Software engineer at {OASYS.name}. Founder of{" "}
+            <a href={`${CODEX_LABS.url}/`} target="_blank" rel="noopener" className="underline hover:text-fun-pink">
+              {CODEX_LABS.name}
+            </a>
+            .
           </p>
         </div>
       </div>

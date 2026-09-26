@@ -4,12 +4,17 @@
   "scripts": {
     "dev": "yarn next dev",
     "build": "yarn next build",
+    "postbuild": "node scripts/verify-seo-build.mjs",
     "start": "yarn next start",
-    "serve": "yarn next serve"
+    "serve": "yarn next serve",
+    "typecheck": "tsc --noEmit",
+    "verify:seo": "node scripts/verify-seo-build.mjs",
+    "indexnow": "bash scripts/ping-indexnow.sh"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
     "@tailwindcss/forms": "^0.5.2",
+    "@vercel/analytics": "^2.0.1",
     "contentlayer": "^0.1.0",
     "gray-matter": "^4.0.3",
     "minimatch": "^10.1.1",
