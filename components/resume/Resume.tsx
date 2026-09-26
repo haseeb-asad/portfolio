@@ -20,7 +20,7 @@ function Resume() {
         </h1>
         <p className="text-fun-gray text-lg sm:text-xl max-w-2xl mb-2">
           Software engineer at Oasys and founder of Codex Labs. Previously
-          AI-First Senior Software Engineer at Khoros (IgniteTech), full-stack
+          AI-First Software Engineer II at Khoros (IgniteTech), full-stack
           across React/TypeScript and Java/GraphQL, with a backend and platform
           background.
         </p>

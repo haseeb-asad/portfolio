@@ -123,6 +123,8 @@ for (const [route, file] of routes) {
     [/googletagmanager|gtag\(|GTM-/i, "Google Tag Manager or gtag"],
     [/id=undefined|'undefined'|"undefined"/, "undefined value in markup"],
     [/contra\.com/i, "Contra embed"],
+    [/testimonial|Anas Sohail|Adam Kuhn|Katie Jones/i, "template testimonials"],
+    [/Senior Software Engineer|Lead Software Engineer|Product Engineer/, "retired job title"],
     [/\u2014|\u2013|&mdash;|&ndash;|&#821[12];|&#x201[34];/i, "em or en dash in page"],
   ]) {
     if (re.test(html)) fail(route, what);
@@ -140,6 +142,8 @@ for (const f of readdirSync(join(root, "public")).filter((f) => /\.(txt|xml)$/.t
   if (/vercel\.app/i.test(text)) fail(`public/${f}`, "vercel.app reference");
   if (/[\u2013\u2014]/.test(text)) fail(`public/${f}`, "em or en dash");
   if (/brayden/i.test(text)) fail(`public/${f}`, "template author identity");
+  if (/Senior Software Engineer|Lead Software Engineer|Product Engineer/.test(text))
+    fail(`public/${f}`, "retired job title");
 }
 
 // Client chunks: no tag manager or template identity bundled in.

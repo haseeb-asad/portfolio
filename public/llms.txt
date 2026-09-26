@@ -5,7 +5,7 @@
 ## About
 
 - Current role: software engineer at Oasys, software for therapy group practices.
-- Previous roles: AI-First Senior Software Engineer at Khoros (IgniteTech); Lead Software Engineer at Glow; Software Engineer II at Bazaar.
+- Previous roles: AI-First Software Engineer II at Khoros (IgniteTech); Lead Engineer at Glow; Software Engineer II at Bazaar.
 - Stack: React, Next.js, TypeScript, Java, Kotlin, Spring Boot, GraphQL, React Native, n8n.
 - Client work is handled through Codex Labs. To hire him for a project, use https://www.codex-labs.dev/get-started or email support@codex-labs.dev.
 - Personal email: haseebasad305@gmail.com

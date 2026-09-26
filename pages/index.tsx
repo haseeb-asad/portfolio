@@ -5,7 +5,6 @@ import Page from "@/components/utility/Page";
 import Projects from "@/components/home/Projects";
 import Experience from "@/components/home/Experience";
 import Skills from "@/components/home/Skills";
-import Testimonials from "@/components/home/Testimonials";
 import Reveal from "@/components/utility/Reveal";
 
 export default function Home() {
@@ -21,9 +20,6 @@ export default function Home() {
         </Reveal>
         <Reveal>
           <Skills />
-        </Reveal>
-        <Reveal>
-          <Testimonials />
         </Reveal>
 
         {/* <Posts allPosts={allPosts} /> */}

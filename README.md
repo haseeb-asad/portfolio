@@ -17,12 +17,12 @@ Personal site of Haseeb Asad: software engineer at Oasys and founder of Codex La
 
 ```
 pages/
-  index.tsx              # Homepage (hero, projects, experience, skills, testimonials)
+  index.tsx              # Homepage (hero, projects, experience, skills, work with me)
   projects.tsx           # Full projects list (client work + personal projects)
   projects/tag/[tag].tsx # Projects filtered by tag
   about.tsx              # About page
 components/
-  home/                  # Homepage sections (Hero, Projects, Experience, Skills, Testimonials, CTA)
+  home/                  # Homepage sections (Hero, Projects, Experience, Skills, CTA)
   Projects/              # Project card and grid components
   designs/               # About page components
   global/                # Navbar, MobileNavbar, Footer, SectionTitle
@@ -32,7 +32,7 @@ components/
 data/
   content/
     projects.ts          # Personal projects
-    home.ts              # Skills, testimonials, experience (career history)
+    home.ts              # Skills, experience (career history)
   global.ts              # Routes and footer
 lib/
   site.ts                # SITE_URL, identity, Oasys and Codex Labs links
@@ -60,7 +60,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 - **Projects**: edit [`data/content/projects.ts`](data/content/projects.ts).
 - **Career history**: edit the `experience` list in [`data/content/home.ts`](data/content/home.ts).
-- **Skills & testimonials**: also in [`data/content/home.ts`](data/content/home.ts).
+- **Skills**: also in [`data/content/home.ts`](data/content/home.ts).
 - **Navigation & footer**: [`data/global.ts`](data/global.ts).
 
 ## Deployment

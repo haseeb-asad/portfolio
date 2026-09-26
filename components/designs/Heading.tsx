@@ -31,7 +31,7 @@ function Heading() {
             , {OASYS.descriptor}.
           </p>
           <p>
-            Before Oasys I was an AI-First Senior Software Engineer at Khoros
+            Before Oasys I was an AI-First Software Engineer II at Khoros
             (IgniteTech), where I owned the Member Experience track end to end
             and shipped full-stack across React/TypeScript and Java/GraphQL. I
             came up through backend and platform work with Spring Boot, Kotlin

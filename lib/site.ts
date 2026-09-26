@@ -8,7 +8,7 @@ export const SITE_NAME = "Haseeb Asad";
 
 export const PERSON = {
   name: "Haseeb Asad",
-  // Oasys title unconfirmed: keep in sync with data/content/home.ts.
+  // Keep in sync with the Oasys entry in data/content/home.ts.
   jobTitle: "Software Engineer",
   // One line, reused in meta, JSON-LD, llms.txt and the OG image.
   tagline:

@@ -3,11 +3,6 @@ type Skill = {
   icon: string,
   style?: object
 };
-type Testimonial = {
-  quote: string,
-  name: string,
-  job: string
-};
 type Experience = {
   company: string,
   role: string,
@@ -18,7 +13,6 @@ type Experience = {
 
 export const experience: Experience[] = [
   {
-    // Title and start date (Sep 2026) not yet confirmed; see lib/site.ts.
     company: "Oasys",
     role: "Software Engineer",
     tech: "Software for therapy group practices",
@@ -34,13 +28,13 @@ export const experience: Experience[] = [
   },
   {
     company: "Khoros (IgniteTech)",
-    role: "AI-First Senior Software Engineer",
+    role: "AI-First Software Engineer II",
     tech: "AI / Full Stack",
     url: "https://www.linkedin.com/company/khoros/",
   },
   {
     company: "Glow",
-    role: "Lead Software Engineer",
+    role: "Lead Engineer",
     tech: "Full Stack",
     url: "https://www.linkedin.com/company/glowinsurance",
   },
@@ -118,27 +112,5 @@ export const skills: Skill[] = [
   {
     title: "Figma",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-  },
-];
-
-
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      "The communication throughout the project was spot on and the genre of design was carried out well.",
-    name: "Anas Sohail",
-    job: "Client",
-  },
-  {
-    quote:
-      "The code was clean, easy to understand, and exactly what I was looking for.",
-    name: "Adam Kuhn",
-    job: "Client",
-  },
-  {
-    quote:
-      "My vision was executed perfectly. The quality and speed of the work was excellent.",
-    name: "Katie Jones",
-    job: "Client",
   },
 ];
