@@ -21,7 +21,7 @@
 
 - [Synopt](https://synopt.dev): AI coding observability for engineering teams using Claude Code, Codex and Cursor, with an open source, self-hosted agent.
 - [Taperlark](https://taperlark.com): native macOS apps (CoolCurve, Preen, Submix).
-- [BookWithKhelo](https://bookwithkhelo.com): sports venue booking in Pakistan, with Android and iOS apps.
+- [BookWithKhelo](https://bookwithkhelo.com): sports venue booking in Pakistan.
 - [openwhenitstime.com](https://openwhenitstime.com): time-locked letters that open on a chosen date.
 
 ## Profiles

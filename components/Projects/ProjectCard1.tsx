@@ -12,6 +12,7 @@ function ProjectCard({ project }) {
       <a
         href={project.links?.[0]?.url || project.link || project.github}
         target="_blank"
+        rel="noopener"
         className={`w-full relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}
       >
         <img
@@ -24,7 +25,7 @@ function ProjectCard({ project }) {
       </a>
       <div className="w-full mt-5">
         <div className="flex projects-center justify-between">
-          <a href={project.links?.[0]?.url || project.link || project.github} target="_blank">
+          <a href={project.links?.[0]?.url || project.link || project.github} target="_blank" rel="noopener">
             <h3 className="text-lg font-bold">{project.title}</h3>
           </a>
           <div className="space-x-2 flex items-center">
@@ -36,7 +37,7 @@ function ProjectCard({ project }) {
                 : "/static/icons/external-link.svg";
 
               return (
-                <a key={index} href={link.url} target="_blank" rel="noreferrer" title={link.label}>
+                <a key={index} href={link.url} target="_blank" rel="noopener" title={link.label}>
                   <Image
                     src={iconSrc}
                     width={16}
@@ -49,7 +50,7 @@ function ProjectCard({ project }) {
 
             {/* Backward compatibility for old link/github fields */}
             {!project.links && project.link && (
-              <a href={project.link} target="_blank" rel="noreferrer">
+              <a href={project.link} target="_blank" rel="noopener">
                 <Image
                   src="/static/icons/external-link.svg"
                   width={16}
@@ -59,7 +60,7 @@ function ProjectCard({ project }) {
               </a>
             )}
             {!project.links && project.github && (
-              <a href={project.github} target="_blank" rel="noreferrer">
+              <a href={project.github} target="_blank" rel="noopener">
                 <Image
                   src="/static/icons/github.svg"
                   width={16}

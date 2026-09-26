@@ -8,7 +8,7 @@ module.exports = {
           // are unaffected.
           {
             source: '/:path*',
-            has: [{ type: 'host', value: 'haseebasad.vercel.app' }],
+            has: [{ type: 'host', value: 'haseebasad\\.vercel\\.app' }],
             destination: 'https://www.haseebasad.com/:path*',
             permanent: true,
           },

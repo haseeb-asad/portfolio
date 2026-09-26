@@ -24,10 +24,17 @@ const routes = new Map([
   ["/projects", "projects.html"],
   ["/resume", "resume.html"],
 ]);
-const tagDir = join(pagesDir, "projects/tag");
-for (const f of readdirSync(tagDir).filter((f) => f.endsWith(".html"))) {
-  routes.set(`/projects/tag/${f.replace(/\.html$/, "")}`, `projects/tag/${f}`);
+// Expected tag routes come from the project data (same kebabCase as
+// utils/utils.ts), so a missing build file fails instead of being skipped.
+const kebabCase = (str) =>
+  str.replace(/([a-z])([A-Z])/g, "$1-$2").replace(/[\s_]+/g, "-").toLowerCase();
+const projectsSrc = readFileSync(join(root, "data/content/projects.ts"), "utf8");
+const tags = new Set();
+for (const [, list] of projectsSrc.matchAll(/tags:\s*\[([^\]]*)\]/g)) {
+  for (const [, tag] of list.matchAll(/"([^"]+)"/g)) tags.add(kebabCase(tag));
 }
+if (tags.size === 0) fail("projects.ts", "no tags parsed; update the verifier");
+for (const tag of tags) routes.set(`/projects/tag/${tag}`, `projects/tag/${tag}.html`);
 
 const attr = (tag, name) => {
   const m = tag.match(new RegExp(`\\s${name}="([^"]*)"`));
@@ -42,7 +49,12 @@ const metaContent = (html, key, value) =>
 const indexable = new Set();
 
 for (const [route, file] of routes) {
-  const html = readFileSync(join(pagesDir, file), "utf8");
+  const path = join(pagesDir, file);
+  if (!existsSync(path)) {
+    fail(route, `built file missing: ${file}`);
+    continue;
+  }
+  const html = readFileSync(path, "utf8");
   const expected = route === "/" ? `${SITE_URL}/` : `${SITE_URL}${route}`;
   const isTag = route.startsWith("/projects/tag/");
 
@@ -52,6 +64,7 @@ for (const [route, file] of routes) {
 
   const desc = metaContent(html, "name", "description");
   if (desc.length !== 1 || !desc[0]) fail(route, "needs exactly one meta description");
+  else if (desc[0].length > 160) fail(route, `description is ${desc[0].length} chars`);
 
   const canonicals = [...html.matchAll(/<link\b[^>]*rel="canonical"[^>]*>/g)].map((m) => attr(m[0], "href"));
   if (canonicals.length !== 1 || canonicals[0] !== expected)
@@ -68,7 +81,10 @@ for (const [route, file] of routes) {
   if (metas(html).some((t) => /property="twitter:/.test(t))) fail(route, "twitter tag uses property=");
   if (metaContent(html, "name", "keywords").length) fail(route, "meta keywords present");
 
-  const robots = metaContent(html, "name", "robots").join(",");
+  const robots = [
+    ...metaContent(html, "name", "robots"),
+    ...metaContent(html, "name", "googlebot"),
+  ].join(",");
   if (isTag && !/noindex/.test(robots)) fail(route, "tag page must be noindex");
   if (!isTag && /noindex/.test(robots)) fail(route, "page must be indexable");
   if (!isTag) indexable.add(expected);
@@ -97,19 +113,44 @@ for (const [route, file] of routes) {
     if (!nodes.some((n) => n["@type"] === "WebSite")) fail(route, "WebSite node missing");
     if (route === "/about" && !nodes.some((n) => n["@type"] === "ProfilePage"))
       fail(route, "ProfilePage node missing");
-    if (/[–—]/.test(raw)) fail(route, "dash in JSON-LD");
+    if (/[\u2013\u2014]|\\u201[34]/.test(raw)) fail(route, "dash in JSON-LD");
+    if (raw.includes("<")) fail(route, "unescaped < in JSON-LD");
   }
 
   for (const [re, what] of [
     [/vercel\.app/i, "vercel.app reference"],
     [/brayden/i, "template author identity"],
     [/googletagmanager|gtag\(|GTM-/i, "Google Tag Manager or gtag"],
-    [/id=undefined|'undefined'/, "undefined analytics id"],
+    [/id=undefined|'undefined'|"undefined"/, "undefined value in markup"],
     [/contra\.com/i, "Contra embed"],
-    [/—|–/, "em or en dash in page"],
+    [/\u2014|\u2013|&mdash;|&ndash;|&#821[12];|&#x201[34];/i, "em or en dash in page"],
   ]) {
     if (re.test(html)) fail(route, what);
   }
+}
+
+// 404 page: must not claim a canonical and must carry a title.
+const notFound = readFileSync(join(pagesDir, "404.html"), "utf8");
+if (/rel="canonical"/.test(notFound)) fail("/404", "404 page emits a canonical");
+if (!/<title\b[^>]*>[^<]+<\/title>/.test(notFound)) fail("/404", "404 page has no title");
+
+// Public text files ship as-is: no stray host, dashes or template identity.
+for (const f of readdirSync(join(root, "public")).filter((f) => /\.(txt|xml)$/.test(f))) {
+  const text = readFileSync(join(root, "public", f), "utf8");
+  if (/vercel\.app/i.test(text)) fail(`public/${f}`, "vercel.app reference");
+  if (/[\u2013\u2014]/.test(text)) fail(`public/${f}`, "em or en dash");
+  if (/brayden/i.test(text)) fail(`public/${f}`, "template author identity");
+}
+
+// Client chunks: no tag manager or template identity bundled in.
+const walk = (dir) =>
+  readdirSync(dir, { withFileTypes: true }).flatMap((d) =>
+    d.isDirectory() ? walk(join(dir, d.name)) : [join(dir, d.name)]
+  );
+for (const f of walk(join(root, ".next/static")).filter((f) => f.endsWith(".js"))) {
+  const js = readFileSync(f, "utf8");
+  if (/googletagmanager|GTM-[A-Z0-9]{4,}|brayden|haseebasad\.vercel\.app/i.test(js))
+    fail(f.slice(root.length), "tag manager, template identity or vercel.app host in client chunk");
 }
 
 // robots.txt and sitemap.xml are static files in public/.
@@ -120,7 +161,8 @@ if ((robots.match(/^User-agent:/gim) || []).length !== 1) fail("robots.txt", "ex
 
 const sitemap = readFileSync(join(root, "public/sitemap.xml"), "utf8");
 const locs = [...sitemap.matchAll(/<loc>([^<]*)<\/loc>/g)].map((m) => m[1]);
-const today = new Date().toISOString().slice(0, 10);
+// One day of slack: dates are written in local time (UTC+5) and checked in UTC.
+const today = new Date(Date.now() + 86400000).toISOString().slice(0, 10);
 for (const loc of locs) {
   if (!indexable.has(loc)) fail("sitemap.xml", `${loc} is not an indexable built page`);
 }

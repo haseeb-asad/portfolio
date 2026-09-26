@@ -68,7 +68,7 @@ function Heading() {
             </li>
             <li>
               <a className="text-fun-pink underline" href="https://bookwithkhelo.com" target="_blank" rel="noopener">BookWithKhelo</a>:
-              sports venue booking in Pakistan, with Android and iOS apps.
+              sports venue booking in Pakistan.
             </li>
             <li>
               <a className="text-fun-pink underline" href="https://openwhenitstime.com" target="_blank" rel="noopener">openwhenitstime.com</a>:

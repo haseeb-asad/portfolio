@@ -10,7 +10,7 @@ const projects: Project[] = [
     links: [
       { label: "Website", url: "https://synopt.dev" },
       { label: "Demo", url: "https://synopt.dev/demo" },
-      { label: "GitHub", url: "https://github.com/haseeb-asad/observability" },
+      { label: "GitHub", url: "https://github.com/Codex-Labs-Tech/synopt-agent" },
     ],
     tags: ["AI Observability", "Security", "Open Source", "Platform", "Full Stack"],
   },
@@ -27,19 +27,17 @@ const projects: Project[] = [
   {
     id: 2,
     title: "BookWithKhelo",
-    desc: "A comprehensive booking platform for sports facilities with mobile apps for both Android and iOS. Users discover, book and manage sports venue reservations across Pakistan.",
+    desc: "A booking platform for sports facilities with mobile apps for both Android and iOS. Users discover, book and manage sports venue reservations across Pakistan.",
     img: "/static/images/project-bookwithkhelo.svg",
     links: [
       { label: "Website", url: "https://bookwithkhelo.com" },
-      { label: "Android App", url: "https://play.google.com/store/apps/details?id=com.bookwithkhelo" },
-      { label: "iOS App", url: "https://apps.apple.com/app/bookwithkhelo" },
     ],
     tags: ["React Native", "Mobile Apps", "Booking System", "iOS", "Android", "Full Stack"],
   },
   {
     id: 3,
     title: "Sehatmand",
-    desc: "A comprehensive health and wellness platform providing healthcare solutions and services. Built to streamline healthcare management and patient care.",
+    desc: "A health and wellness platform for healthcare management and patient care.",
     img: "/static/images/project-sehatmand.svg",
     links: [
       { label: "Website", url: "https://sehatmand.io" },
@@ -49,7 +47,7 @@ const projects: Project[] = [
   {
     id: 4,
     title: "Querify",
-    desc: "A powerful query and data management platform designed to simplify complex data operations. Enables efficient data querying and analytics for businesses.",
+    desc: "A query and data management platform for data querying and analytics.",
     img: "/static/images/project-querify.svg",
     links: [
       { label: "Website", url: "https://querify.tech" },
@@ -59,7 +57,7 @@ const projects: Project[] = [
   {
     id: 5,
     title: "NativeOps",
-    desc: "DevOps and infrastructure management platform for native applications and cloud operations. Streamlines deployment, monitoring, and scaling of cloud-native applications.",
+    desc: "DevOps and infrastructure management platform for native applications and cloud operations. Covers deployment, monitoring and scaling of cloud-native applications.",
     img: "/static/images/project-nativeops.svg",
     links: [
       { label: "Website", url: "https://nativeops.tech" },

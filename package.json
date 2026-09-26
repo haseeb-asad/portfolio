@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "yarn next dev",
     "build": "yarn next build",
+    "postbuild": "node scripts/verify-seo-build.mjs",
     "start": "yarn next start",
     "serve": "yarn next serve",
     "typecheck": "tsc --noEmit",

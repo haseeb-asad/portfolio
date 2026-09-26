@@ -33,8 +33,8 @@ function Heading({ tag }: HeadingProps) {
       {!tag && (
         <p className="text-fun-gray text-xl sm:text-2xl max-w-3xl m-auto">
           Products I have built and shipped: an AI coding observability
-          platform, native macOS apps, a sports venue booking platform with
-          iOS and Android apps, and more.
+          platform, native macOS apps, a sports venue booking platform, and
+          more.
         </p>
       )}
     </div>

@@ -12,7 +12,7 @@ function Projects() {
       </div>
       <p className="text-fun-gray text-center mb-8 max-w-3xl mx-auto">
         Products I have built and shipped, from AI coding observability to
-        native Mac apps and mobile booking.
+        native Mac apps and sports venue booking.
       </p>
       <div className="grid grid-cols-1 gap-12 md:gap-5 md:grid-cols-3 items-start">
         {projects.slice(0, 3).map((item) => {

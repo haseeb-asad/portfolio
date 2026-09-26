@@ -10,7 +10,7 @@ function About() {
       profilePage
       meta={{
         title: "About",
-        desc: "About Haseeb Asad: software engineer at Oasys, formerly at Khoros (IgniteTech), and founder of Codex Labs, a studio for automation, AI agents and app development.",
+        desc: "About Haseeb Asad: software engineer at Oasys, previously at Khoros (IgniteTech), and founder of Codex Labs, a studio for automation, AI agents and apps.",
       }}
     >
       <Heading />

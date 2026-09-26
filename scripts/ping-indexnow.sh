@@ -28,6 +28,7 @@ https://api.indexnow.org/indexnow.
 EOF
 }
 
+[[ $# -le 1 ]] || { usage >&2; exit 64; }
 mode="${1:---dry-run}"
 case "$mode" in
   --dry-run|--execute) ;;
